@@ -7,6 +7,9 @@ const daysRef = document.querySelector('[data-days]');
 const hoursRef = document.querySelector('[data-hours]');
 const minutesRef = document.querySelector('[data-minutes]');
 const secondsRef = document.querySelector('[data-seconds]');
+
+const inputDate = document.querySelector('input');
+
 let timerId = null;
 startBtn.setAttribute('disabled', true);
 
@@ -68,6 +71,8 @@ const options = {
       }
       showTimer();
       timerId = setInterval(showTimer, 1000);
+      inputDate.setAttribute('disabled', true);
+
     };
 
     startBtn.addEventListener('click', onClick);
