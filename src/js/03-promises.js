@@ -10,6 +10,15 @@ form.addEventListener('submit', event => {
   let firstDelay = Number(inputDelay.value);
   let delayStep = Number(stepDelay.value);
   let amountNumber = Number(amount.value);
+
+  if (firstDelay<0 || delayStep<0 || amountNumber<=0) 
+  {
+    alert ("Введіть дотатні значення");
+    inputDelay.value="";
+    stepDelay.value="";
+    amount.value="";
+    breack;
+  }
   submitBtn.disabled = 'true';
   console.log(firstDelay, delayStep, amountNumber);
 
