@@ -72,6 +72,8 @@ const options = {
       showTimer();
       timerId = setInterval(showTimer, 1000);
       inputDate.setAttribute('disabled', true);
+      startBtn.setAttribute('disabled', true);
+
 
     };
 
